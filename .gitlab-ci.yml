@@ -1,7 +1,7 @@
 pages:
   stage: deploy
   script:
-    - mv dist public
+    - cp -r -f dist public
   artifacts:
     paths:
       - public
