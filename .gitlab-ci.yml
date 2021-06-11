@@ -1,7 +1,9 @@
 pages:
   stage: deploy
   script:
-    - cp -f dist public
+    - yarn install
+    - yarn intra:build
+    - mv dist public
   artifacts:
     paths:
       - public
