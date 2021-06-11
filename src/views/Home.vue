@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to My App"/>
+    <HelloWorld msg="Welcome to Koji's App"/>
   </div>
 </template>
 
