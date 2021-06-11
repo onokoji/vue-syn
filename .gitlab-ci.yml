@@ -2,7 +2,7 @@ pages:
   stage: deploy
   script:
     - yarn install
-    - yarn intra:build
+    - yarn build
     - mv dist public
   artifacts:
     paths:
