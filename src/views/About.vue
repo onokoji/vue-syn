@@ -1,23 +1,22 @@
 <template>
-<div v-cloak>
 
 <div v-if="center" key="center">
-<p>最初の画面</p>
+<h2>最初の画面</h2>
 <div v-on:click="watchLeft">左の画面にいく</div>
 <div v-on:click="watchRight">右の画面にいく</div>
 </div>
 <div v-if="left" key="left">
-<p>左の画面</p>
+<h2>左の画面</h2>
 <div v-on:click="watchCenter">最初の画面に戻る</div>
 <div v-on:click="watchRight">右の画面にいく</div>
 </div>
 <div v-if="right" key="right">
-<p>右の画面</p>
+<h2>右の画面</h2>
 <div v-on:click="watchCenter">最初の画面に戻る</div>
 <div v-on:click="watchLeft">左の画面にいく</div>
 </div>
 
-</div>
+
 </template>
 
 <script>
@@ -51,7 +50,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style>
 div.click{
   cursor: pointer;
 }

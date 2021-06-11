@@ -7,7 +7,7 @@
   <div v-show="visible">
   <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
   </div>
-  </transition>
+</transition>
   <p>いろいろ書きたいこと...夢...希望...勇気...そして、愛</p>
       <p>フェー</p>
     <p>フェー</p>
