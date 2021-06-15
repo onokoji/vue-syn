@@ -1,6 +1,6 @@
 <template>
 
-<div v-if="center" key="center">
+<div v-if="center" key="center" name="fade">
 <h2>最初の画面</h2>
 <div v-on:click="watchLeft">左の画面にいく</div>
 <div v-on:click="watchRight">右の画面にいく</div>
@@ -71,6 +71,12 @@ div.click{
 .fade-enter-to,
 .fade-leave {
   opacity: 1;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
 

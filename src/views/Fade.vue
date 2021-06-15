@@ -1,7 +1,12 @@
 <template>
+  <h1 name="fade">フェードトランジション</h1>
 <div id="demo">
-  <transition name="fade">
-   <img alt="Vue logo" src="../assets/logo.png">
+  <button v-on:click="show = !show">
+    Toggle
+  </button>
+
+  <transition name="fade">    
+    <p v-if="show">hello</p>
   </transition>
 </div>
 
