@@ -8,11 +8,13 @@ const routes = [
     component: Home
   },
   {
+    path: '/about',
+    name: 'About',
+    component: () => import(/* webpackChunkName: "test" */ '../views/About.vue')
+  },
+  {
     path: '/page',
     name: 'Page',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Page.vue')
   },
   {
@@ -24,7 +26,8 @@ const routes = [
     path: '/scroll',
     name: 'Scroll',
     component: () => import(/* webpackChunkName: "test" */ '../views/Scroll.vue')
-  }
+  },
+  
 ]
 
 const router = createRouter({

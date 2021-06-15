@@ -3,15 +3,12 @@
 <div id="nav">
 <!-- 以下はHTMLのaタグみたいな感じです -->
 <router-link to="/">Home</router-link> |
-<router-link to="/about">About</router-link> |
-<router-link to="/scroll">Scroll</router-link> |
-<router-link to="/fade">Fade</router-link> |
-<!-- <router-link to="/page">Page</router-link> | -->
+<router-link to="/about">About</router-link>
 </div>
 
 <!-- transitionタグで囲むことでrouter animationを簡単につけれます -->
 <!-- nameに好きな名前をつけてstyle内のトランジションクラスの前に書きます -->
-<transition>
+<transition name="router-transition">
 
 <!-- router-viewにviewsフォルダ内の〇〇.vueがpathに応じて表示されます -->
 <router-view/>
@@ -22,7 +19,7 @@
 </template>
 
 <style>
-/* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"; */
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css";
 
 body {
 background: #eee;
@@ -59,37 +56,36 @@ right: 0;
 width: inherit;
 padding: 0 50px;
 }
-/* バウンス */
 
-.v-enter-active {
-  animation: bounce-in .5s ease-out both;
+.router-transition-enter-active {
+animation: fadeIn 1s;
+animation-delay: .5s;
+opacity: 0;
 }
 
-.v-leave-active {
-  animation: bounce-in .5s reverse ease-in both;
+@keyframes fadeIn {
+from {
+transform: translateY(-20px);
+opacity: 0;
 }
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
+to {
+transform: translateY(0);
+opacity: 1;
+}
 }
 
-
-/* 透過 */
-/* .v-enter-active, .v-leave-active {
-  transition: opacity .5s ease;
+.router-transition-leave-active {
+animation: fadeOut 1s;
 }
 
-.v-enter-from, .v-leave-to {
-  opacity: 0;
-/* } */
-
-
+@keyframes fadeOut {
+from {
+transform: translateY(0);
+}
+to {
+transform: translateY(-20px);
+opacity: 0;
+}
+}
 
 </style>

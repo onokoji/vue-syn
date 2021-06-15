@@ -1,11 +1,8 @@
 <template>
-<div id="demo">
-  <transition name="fade">
-   <img alt="Vue logo" src="../assets/logo.png">
-  </transition>
+<div class="home page">
+<h1>This is a Home page</h1>
+<p>ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。ここはHomeページやで〜〜。</p>
 </div>
-
-
 </template>
 
 <script>
@@ -21,11 +18,6 @@ export default {
 </script>
 
 <style>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+
 </style>
 

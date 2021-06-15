@@ -1,11 +1,11 @@
 <template>
-  <h1 name="fade">フェードトランジション</h1>
+  <h1>フェードトランジション</h1>
 <div id="demo">
-  <button v-on:click="show = !show">
+  <button @click="show = !show">
     Toggle
   </button>
-
-  <transition name="fade">    
+  
+  <transition name="fade">
     <p v-if="show">hello</p>
   </transition>
 </div>
@@ -27,9 +27,10 @@ export default {
 
 <style>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity .5s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
 </style>

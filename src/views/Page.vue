@@ -1,21 +1,21 @@
 <template>
-
-<div v-if="center" key="center" name="fade">
+<transition-group name="fade" mode="out-in">
+<div v-if="center" key="center">
 <h2>最初の画面</h2>
-<div v-on:click="watchLeft">左の画面にいく</div>
-<div v-on:click="watchRight">右の画面にいく</div>
+<div @click="watchLeft">左の画面にいく</div>
+<div @click="watchRight">右の画面にいく</div>
 </div>
 <div v-if="left" key="left">
 <h2>左の画面</h2>
-<div v-on:click="watchCenter">最初の画面に戻る</div>
-<div v-on:click="watchRight">右の画面にいく</div>
+<div @click="watchCenter">最初の画面に戻る</div>
+<div @click="watchRight">右の画面にいく</div>
 </div>
 <div v-if="right" key="right">
 <h2>右の画面</h2>
-<div v-on:click="watchCenter">最初の画面に戻る</div>
-<div v-on:click="watchLeft">左の画面にいく</div>
+<div @click="watchCenter">最初の画面に戻る</div>
+<div @click="watchLeft">左の画面にいく</div>
 </div>
-
+</transition-group>
 
 </template>
 
@@ -24,10 +24,23 @@
 export default {
   data() {
       return {
+        show: false,
         center: true,
         left: false,
         right: false,
       };
+    },
+    mounted() {
+      //コンポーネントがマウントされるタイミングでフラグを書き換え->表示アニメーション
+      this.show = true;
+    },
+    beforeRouteLeave(to, from, next) {
+      //vue-routerでの遷移発生イベント時にフラグを書き換え->削除アニメーション
+      this.show = false;
+      setTimeout(() => {
+        //setTimeoutにより、3秒後にページ遷移を実行
+        next();
+      }, 3000);
     },
     methods: {
       watchCenter: function () {
@@ -55,28 +68,25 @@ div.click{
   cursor: pointer;
 }
  
-[v-cloak] {
+/* [v-cloak] {
   display: none;
-}
+} */
  
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
- 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter-to,
-.fade-leave {
-  opacity: 1;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+  .fade-enter-active {
+    transition: opacity 3s;
+    opacity: 0;
+  }
+  .fade-enter-to {
+    opacity: 1;
+  }
+
+  .fade-leave-active {
+    transition: opacity 3s;
+    opacity: 1;
+  }
+  .fade-leave-to {
+    opacity: 0;
+  }
+
 </style>
 
