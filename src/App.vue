@@ -15,13 +15,13 @@
 <router-link to="/about">About</router-link> |
 <router-link to="/thanks">Thanks</router-link> |
 <!-- <router-link to="/scroll">Scroll</router-link> | -->
-
 <!-- <router-link to="/page">Page</router-link> | -->
 </div>
+
 </template>
 
 <style>
-/* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"; */
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css";
 
 body{
   margin: 0;
@@ -57,6 +57,9 @@ height: 60vh;
 .page p{
   font-size: 24px;
   color: #A1A1A1;
+}
+.page h1 a {
+  color:#999;
 }
 #nav {
 padding: 30px;

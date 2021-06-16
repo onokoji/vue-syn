@@ -1,7 +1,7 @@
 <template>
 <div class="thanks page">
 <img src="../assets/logo-blue.svg" alt="">
-<h1>引き続き。</h1>
+<h1>引き続き。<router-link to="/"><font-awesome-icon icon="arrow-circle-right" /></router-link> </h1>
 <p>さらに、また機会作ってアップデートしていきます。ありがとうございました。</p>
 </div>
 </template>
