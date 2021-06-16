@@ -1,8 +1,8 @@
 <template>
 <div class="thanks page">
 <img src="../assets/logo-blue.svg" alt="">
-<h1>引き続き。<router-link to="/"><font-awesome-icon icon="arrow-circle-right" class="animated headShake infinite" /></router-link> </h1>
-<p>さらに、また機会作ってアップデートしていきます。ありがとうございました。</p>
+<h1>引き続き。<router-link to="/"><font-awesome-icon icon="undo-alt" class="animated tada infinite" /></router-link> </h1>
+<p>さらに、また機会作ってアップデートしていきます。ありがとうございました。参考 :https://naruhodo.repop.jp/animate-css-2/#toc_id_1</p>
 </div>
 </template>
 <style scoped>
