@@ -1,5 +1,6 @@
 <template>
-  <h1>フェードトランジション</h1>
+<div class="fade page">
+<h1>フェードトランジション</h1>
 <div id="demo">
   <button @click="show = !show">
     Toggle
@@ -9,8 +10,7 @@
     <p v-if="show">hello</p>
   </transition>
 </div>
-
-
+</div>
 </template>
 
 <script>

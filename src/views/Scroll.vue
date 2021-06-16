@@ -1,9 +1,6 @@
 <template>
-  <div class="home">
-    
+<div class="scroll page">
     <h1>Vueでスクロール位置を取得しフェードイン・アウト処理をする</h1>
-  </div>
-
 <transition name="fade">
   <div v-show="visible">
   <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
@@ -48,7 +45,7 @@
     <p>するよ</p>
     <p>するよ</p>
     <p>するよ</p>
-
+</div>
 </template>
 
 <script>

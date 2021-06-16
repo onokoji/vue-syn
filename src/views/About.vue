@@ -1,6 +1,14 @@
 <template>
 <div class="about page">
-<h1>This is an about page</h1>
-<p>ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。ここはAboutページやで〜〜。</p>
+<img src="../assets/logo-y.svg" alt="">
+<h1>昨年の自作ロゴを使って。</h1>
+<p>Vue.jsには transition という機能があるのですね、これを利用したシンプルなエフェクトを入れてあります。ちょっとやり始めるといろいろと調べないとできないですね、まずは触りで、Vue.jsをさわれたのはよかったです。</p>
 </div>
 </template>
+<style>
+
+.about {
+background: #111;
+
+}
+</style>

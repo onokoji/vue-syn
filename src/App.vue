@@ -1,43 +1,62 @@
 <template>
+
 <div id="app">
+<!-- transitionタグで囲むことでrouter animationを簡単につけれます -->
+<!-- nameに好きな名前をつけてstyle内のトランジションクラスの前に書きます -->
+<transition>
+<!-- router-viewにviewsフォルダ内の〇〇.vueがpathに応じて表示されます -->
+<router-view/>
+</transition>
+
+</div>
 <div id="nav">
 <!-- 以下はHTMLのaタグみたいな感じです -->
 <router-link to="/">Home</router-link> |
 <router-link to="/about">About</router-link> |
-<router-link to="/scroll">Scroll</router-link> |
-<router-link to="/fade">Fade</router-link> |
+<router-link to="/thanks">Thanks</router-link> |
+<!-- <router-link to="/scroll">Scroll</router-link> | -->
+
 <!-- <router-link to="/page">Page</router-link> | -->
-</div>
-
-<!-- transitionタグで囲むことでrouter animationを簡単につけれます -->
-<!-- nameに好きな名前をつけてstyle内のトランジションクラスの前に書きます -->
-<transition>
-
-<!-- router-viewにviewsフォルダ内の〇〇.vueがpathに応じて表示されます -->
-<router-view/>
-
-</transition>
-
 </div>
 </template>
 
 <style>
 /* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"; */
 
-body {
-background: #eee;
+body{
+  margin: 0;
+  background: #000;
 }
 
 #app {
-height: 50vh;
+height: 70vh;
 margin: 0 auto;
-background: #fff;
 font-family: 'Avenir', Helvetica, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-align: center;
 color: #2c3e50;
-padding: 30px;
+padding: 0px;
+}
+.page {
+background: #111;
+color: #FFF;
+position: fixed;
+left: 0;
+right: 0;
+width: inherit;
+padding: 50px 50px;
+height: 60vh;
+}
+.page a{
+  color: #42b983;
+}
+.page h1{
+  font-size: 48px;
+}
+.page p{
+  font-size: 24px;
+  color: #A1A1A1;
 }
 #nav {
 padding: 30px;
@@ -52,19 +71,12 @@ color: #2c3e50;
 color: #42b983;
 }
 
-.page {
-position: fixed;
-left: 0;
-right: 0;
-width: inherit;
-padding: 0 50px;
-}
+
 /* バウンス */
 
 .v-enter-active {
   animation: bounce-in .5s ease-out both;
 }
-
 .v-leave-active {
   animation: bounce-in .5s reverse ease-in both;
 }
@@ -88,7 +100,17 @@ padding: 0 50px;
 
 .v-enter-from, .v-leave-to {
   opacity: 0;
-/* } */
+} */
+
+/* .v-enter-active, .v-leave-active {
+ transition: all 0.3s ease-out;
+}
+
+.v-enter-from, .v-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+  
+} */
 
 
 
