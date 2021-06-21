@@ -48,8 +48,11 @@ width: inherit;
 padding: 50px 50px;
 height: 60vh;
 }
-.page a{
-  color: #42b983;
+.page p a{
+  color: #bbbbbb;
+  text-decoration: none;
+  padding-bottom: -2px;
+  border-bottom:2px dotted #666;
 }
 .page h1{
   font-size: 48px;
