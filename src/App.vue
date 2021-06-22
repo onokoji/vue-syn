@@ -1,5 +1,13 @@
 <template>
-
+<div id="nav">
+<!-- 以下はHTMLのaタグみたいな感じです -->
+<router-link to="/"><img src="./assets/logo-line.svg" alt=""></router-link> |
+<router-link to="/">Home</router-link> |
+<router-link to="/about">About</router-link> |
+<router-link to="/scroll">Scroll</router-link> |
+<router-link to="/thanks">Thanks</router-link> |
+<!-- <router-link to="/page">Page</router-link> | -->
+</div>
 <div id="app">
 <!-- transitionタグで囲むことでrouter animationを簡単につけれます -->
 <!-- nameに好きな名前をつけてstyle内のトランジションクラスの前に書きます -->
@@ -9,14 +17,7 @@
 </transition>
 
 </div>
-<div id="nav">
-<!-- 以下はHTMLのaタグみたいな感じです -->
-<router-link to="/">Home</router-link> |
-<router-link to="/about">About</router-link> |
-<router-link to="/thanks">Thanks</router-link> |
-<!-- <router-link to="/scroll">Scroll</router-link> | -->
-<!-- <router-link to="/page">Page</router-link> | -->
-</div>
+
 
 </template>
 
@@ -66,6 +67,11 @@ height: 60vh;
 }
 #nav {
 padding: 30px;
+
+}
+#nav img {
+width: 16%;
+float: left;
 }
 
 #nav a {
