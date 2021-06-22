@@ -1,6 +1,6 @@
 <template>
 <div class="scroll page">
-    <h1>Vueでスクロール位置を取得しフェードイン・アウト処理をする</h1>
+    <h1>Vueでスクロール位置を取得しフェードイン・アウト</h1>
 <transition name="fade">
   <div v-show="visible">
   <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
@@ -38,7 +38,8 @@
     <p>するよ</p>
     <p>するよ</p>
     <p>するよ</p>
-    <p>するよ</p>
+    <p>するよ <router-link to="/thanks"><font-awesome-icon icon="arrow-circle-right" class="animated headShake infinite" /></router-link></p>
+   
     <!-- <p>するよ</p>
     <p>するよ</p>
     <p>するよ</p>

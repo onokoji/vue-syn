@@ -40,7 +40,7 @@ color: #2c3e50;
 padding: 0px;
 }
 .page {
-background: #111;
+/* background: #111; */
 color: #FFF;
 position: fixed;
 left: 0;
@@ -86,7 +86,7 @@ color: #42b983;
 
 /* バウンス */
 
-.v-enter-active {
+/* .v-enter-active {
   animation: bounce-in .5s ease-out both;
 }
 .v-leave-active {
@@ -102,19 +102,19 @@ color: #42b983;
   100% {
     transform: scale(1);
   }
-}
+} */
 
 
 /* 透過 */
-/* .v-enter-active, .v-leave-active {
+.v-enter-active, .v-leave-active {
   transition: opacity .5s ease;
 }
 
 .v-enter-from, .v-leave-to {
   opacity: 0;
-} */
+}
 
-/* .v-enter-active, .v-leave-active {
+.v-enter-active, .v-leave-active {
  transition: all 0.3s ease-out;
 }
 
@@ -122,7 +122,7 @@ color: #42b983;
   transform: translateX(20px);
   opacity: 0;
   
-} */
+}
 
 
 

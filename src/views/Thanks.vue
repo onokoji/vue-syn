@@ -7,10 +7,10 @@
 </template>
 <style scoped>
 .thanks {
-background: #FFF;
-color: #1D1D1F;
+/* background: #FFF; */
+/* color: #1D1D1F; */
 }
 .thanks p{
-  color: #1D1D1F;
+  /* color: #1D1D1F; */
 }
 </style>
