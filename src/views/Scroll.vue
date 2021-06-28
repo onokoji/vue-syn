@@ -1,44 +1,15 @@
 <template>
 <div class="scroll page">
-    <h1>Vueでスクロール位置を取得しフェードイン・アウト</h1>
+    <h1>Please Scroll</h1>
 <transition name="fade">
   <div v-show="visible">
-  <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
+  <div id="scroll-fadein">
+    <img src="../assets/logo-y.svg" alt="">
+<h1>昨年の自作ロゴを使って。<router-link to="/scroll"><font-awesome-icon icon="arrow-circle-right" class="animated headShake infinite" /></router-link> </h1>
+<p>Vue.jsには transition という機能があるのですね、これを利用したシンプルなエフェクトを入れてあります。ちょっとやり始めるといろいろと調べないとできないですね、まずは触りで、Vue.jsをさわれたのはよかったです。</p>
+    </div>
   </div>
 </transition>
-  <p>いろいろ書きたいこと...夢...希望...勇気...そして、愛</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>フェー</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>ドイン</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>アウト</p>
-    <p>するよ</p>
-    <p>するよ</p>
-    <p>するよ</p>
-    <p>するよ</p>
-    <p>するよ <router-link to="/thanks"><font-awesome-icon icon="arrow-circle-right" class="animated headShake infinite" /></router-link></p>
    
     <!-- <p>するよ</p>
     <p>するよ</p>
@@ -53,7 +24,7 @@
 export default {
   data() {
     return {
-      show: true,
+      // show: true,
       visible: false,
     };
   },
@@ -64,8 +35,8 @@ export default {
     handleScroll() {
       this.scrollY = window.scrollY;
       if (!this.visible) {
-        this.visible = window.scrollY > 200;
-      } else if (window.scrollY < 190) {
+        this.visible = window.scrollY > 20;
+      } else if (window.scrollY < 10) {
         this.visible = !this.visible;
       }
     },
@@ -97,30 +68,27 @@ li {
 a {
   color: #42b983;
 }
-#header-logo {
+#scroll-fadein {
   position: fixed;
   top: 5%;
-  left: 9%;
+  padding: 200px 50px 0 0;
+  // left: 9%;
 }
 
 /* ヘッダーロゴ フェード処理ここから */
-.fade-enter {
-  opacity: 0;
-}
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s;
-}
-
-.fade-enter-to {
-  opacity: 1;
-}
-
+.fade-enter-from ,
 .fade-leave-to {
   opacity: 0;
   transition: opacity 1s;
 }
+.fade-enter-active,
+ {
+  transition: opacity 1s;
+}
+
+
+
 /* ヘッダーロゴ フェード処理ここまで */
 
 </style>
