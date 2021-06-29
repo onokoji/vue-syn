@@ -26,8 +26,20 @@
 
 body{
   margin: 0;
-  background: #000;
+  /* background: #000; */
 }
+body{
+  animation: bgchange 20s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+}
+
+@keyframes bgchange{
+      0%   {background:#000;}/*変化させたい色*/
+      25%  {background:#fdcb9e;}/*変化させたい色*/
+      50%  {background:#fdcbc1;}/*変化させたい色*/
+      75%  {background:#ffff8c;}/*変化させたい色*/
+      90%  {background:#b2dffb;}/*変化させたい色*/
+      100% {background:#000;}/*変化させたい色*/
+ }
 
 #app {
 height: 70vh;
@@ -49,6 +61,7 @@ width: inherit;
 padding: 50px 50px;
 height: 60vh;
 }
+
 .page p a{
   color: #bbbbbb;
   text-decoration: none;
@@ -106,24 +119,17 @@ color: #2272d3;
 
 
 /* 透過 */
-.v-enter-active, .v-leave-active {
-  transition: opacity .5s ease;
-}
 
 .v-enter-from, .v-leave-to {
-  opacity: 0;
-}
-
-.v-enter-active, .v-leave-active {
- transition: all 0.3s ease-out;
-}
-
-.v-enter-from, .v-leave-to {
-  transform: translateX(20px);
+  transform: translateX(-20px);
   opacity: 0;
   
 }
 
+
+.v-enter-active, .v-leave-active {
+ transition: all 1s ease-out;
+}
 
 
 </style>
