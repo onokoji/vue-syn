@@ -34,10 +34,7 @@ body{
 
 @keyframes bgchange{
       0%   {background:#000;}/*変化させたい色*/
-      25%  {background:#fdcb9e;}/*変化させたい色*/
-      50%  {background:#fdcbc1;}/*変化させたい色*/
-      75%  {background:#ffff8c;}/*変化させたい色*/
-      90%  {background:#b2dffb;}/*変化させたい色*/
+      50%  {background:#b2dffb;}/*変化させたい色*/
       100% {background:#000;}/*変化させたい色*/
  }
 
