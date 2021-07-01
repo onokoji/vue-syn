@@ -29,12 +29,13 @@ body{
   /* background: #000; */
 }
 body{
-  animation: bgchange 20s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+  animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
 }
 
 @keyframes bgchange{
       0%   {background:#000;}/*変化させたい色*/
-      50%  {background:#b2dffb;}/*変化させたい色*/
+      40%  {background:#7e9db1;}/*変化させたい色*/
+      80%  {background:#b17ea0;}/*変化させたい色*/
       100% {background:#000;}/*変化させたい色*/
  }
 
@@ -70,10 +71,10 @@ height: 60vh;
 }
 .page p{
   font-size: 24px;
-  color: #A1A1A1;
+  color: #d3d3d3;
 }
 .page h1 a {
-  color:#999;
+  color:rgb(194, 194, 194);
 }
 #nav {
 padding: 30px;
@@ -90,7 +91,7 @@ color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-color: #2272d3;
+color: #ffffff;
 }
 
 
