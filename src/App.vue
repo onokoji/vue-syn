@@ -1,7 +1,7 @@
 <template>
 <div id="nav">
 <!-- 以下はHTMLのaタグみたいな感じです -->
-<router-link to="/"><img src="./assets/logo-line.svg" alt=""></router-link> |
+<router-link to="/"><img src="./assets/logo-line-s.svg" alt=""></router-link> |
 <router-link to="/">Home</router-link> |
 <router-link to="/about">About</router-link> |
 <router-link to="/scroll">Scroll</router-link> |
