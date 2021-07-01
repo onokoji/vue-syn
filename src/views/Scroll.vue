@@ -5,8 +5,8 @@
   <div v-show="visible">
   <div id="scroll-fadein">
     <img src="../assets/logo-y.svg" alt="">
-<h1>昨年の自作ロゴを使って。<router-link to="/scroll"><font-awesome-icon icon="arrow-circle-right" class="animated headShake infinite" /></router-link> </h1>
-<p>Vue.jsには transition という機能があるのですね、これを利用したシンプルなエフェクトを入れてあります。ちょっとやり始めるといろいろと調べないとできないですね、まずは触りで、Vue.jsをさわれたのはよかったです。</p>
+<h1>フェードイン・フェードアウト<router-link to="/thanks"><font-awesome-icon icon="arrow-circle-right" class="animated headShake infinite" /></router-link> </h1>
+<p>フェードイン・フェードアウトはv-showを利用してスクロール位置をスクリプトで確認しつつ、またEnter &amp; Leave トランジションで対応しています</p>
     </div>
   </div>
 </transition>
