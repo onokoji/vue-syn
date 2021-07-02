@@ -1,6 +1,6 @@
 <template>
 <div class="scroll page">
-    <h1>Please Scroll</h1>
+    <h1>Please Scroll <font-awesome-icon icon="arrow-down" class="animated fadeOutDown infinite" /></h1>
 <transition name="fade">
   <div v-show="visible">
   <div id="scroll-fadein">
